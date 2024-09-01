@@ -1,13 +1,8 @@
-/* - White: hsl(0, 0%, 100%)
-
-- Slate 300: hsl(212, 45%, 89%)
-- Slate 500: hsl(216, 15%, 48%)
-- Slate 900: hsl(218, 44%, 22%) */
-
-
 :root {
-    --main-color: #D5E1EF;
+    --primary-color: hsl(212, 45%, 89%);
     --secondary-color: #FFF;
+    --tertiary-color: hsl(216, 15%, 48%);
+    --quaternary-color: hsl(218, 44%, 22%);
 }
 
 * {
@@ -17,7 +12,7 @@
 }
 
 body {
-    background-color: #D5E1EF;
+    background-color: var(--primary-color);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -28,11 +23,11 @@ body {
 }
 
 main {
-margin: 0 auto;
-background-color: #FFF;
-padding: 15px;
-width: 350px;
-border-radius: 5%;
+    margin: 0 auto;
+    background-color: var(--secondary-color);
+    padding: 15px;
+    width: 350px;
+    border-radius: 5%;
 }
 
 img {
@@ -48,35 +43,26 @@ p {
     padding: 1rem;
 }
 
+/* Custom Classes */
+
 .qr-code {
- margin-bottom: 0.5rem;
- width: 100%;
- margin: 0 auto;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    margin: 0 auto;
 }
-
-.text {
-
-}
-
-
-
-/* <weight>: Use a value from 100 to 900 */
 
 .outfit-400 {
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-  }
+    color: var(--tertiary-color);
+}
 
-  .outfit-700 {
+.outfit-700 {
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-  }
-
-  .attribution {
-    /* display: flex; */
-    /* flex-direction: column; */
-  }
+    color: var(--quaternary-color);
+}
