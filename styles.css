@@ -5,20 +5,58 @@
     --quaternary-color: hsl(218, 44%, 22%);
 }
 
-* {
-    margin: 0;
-    padding: 0;
+/* CSS RESET by Josh Comeau */
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
+* {
+    margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
 body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
     background-color: var(--primary-color);
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
-    max-height: 100vh;
+    min-height: 100vh;
     justify-content: center;
 }
 
@@ -26,7 +64,8 @@ main {
     margin: 0 auto;
     background-color: var(--secondary-color);
     padding: 15px;
-    width: 350px;
+    width: 100%;
+    max-width: 20rem;
     border-radius: 5%;
 }
 
@@ -36,11 +75,11 @@ img {
 }
 
 h1 {
-    padding: 0.8rem;
+    padding: 0.8rem 0.5rem 0.6rem 0.5rem;
 }
 
 p {
-    padding: 1rem;
+    padding: 1rem 1rem 2rem 1rem;
 }
 
 /* Custom Classes */
@@ -64,5 +103,6 @@ p {
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
+    font-size: 1.5rem;
     color: var(--quaternary-color);
 }
